@@ -7,7 +7,8 @@ region: "us-east-1"
 frontend_image_tag: "frontend-1.0"
 backend_image_tag: "backend-1.0"
 docker_network_name: "my_bridge"
-compose_local_path: "/workspace/docker-compose.yaml" #replace with your local path of the updated file
+# compose_local_path: "/workspace/docker-compose.yaml" #replace with your local path of the updated file
+compose_local_path: "/var/jenkins_home/workspace/deploy_note_app/ansible/docker-compose.yaml" #replace with your local path of the updated file
 compose_remote_path: "/home/ubuntu/docker-compose.yaml"
 project_src_path: "/home/ubuntu"
 backend_container_name: "backend-app"
