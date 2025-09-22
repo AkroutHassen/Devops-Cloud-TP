@@ -7,5 +7,6 @@ pipeline {
                 extensions: [], 
                 userRemoteConfigs: [[credentialsId: '37fa8c5a-1f17-42ce-91b1-43814f29c41a', url: 'https://github.com/AkroutHassen/Devops-Cloud-TP']])         
             }
+        }
     }
 }
