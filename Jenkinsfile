@@ -137,6 +137,13 @@ pipeline {
         stage('Login to AWS ECR') {
             steps {
                 script {
+                    sh '''
+                    aws configure set aws_access_key_id "$AWS_ACCESS_KEY_ID"
+                    aws configure set aws_secret_access_key "$AWS_SECRET_ACCESS_KEY"
+                    aws configure set region "$AWS_REGION"
+                    aws configure set output json
+                    aws sts get-caller-identity
+                    '''
                     sh """
                     aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${ECR_REPO_URL}
                     """
