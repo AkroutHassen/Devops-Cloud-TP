@@ -1,10 +1,11 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
+import { API_BASE_URL } from "./config";
 
 const apiUrl = "http";
 
 const api = axios.create({
-  baseURL: "http://13.218.109.254:8000",
+  baseURL: API_BASE_URL
 });
 
 api.interceptors.request.use(
