@@ -1,0 +1,19 @@
+# Ignore everything in my-terraform-project
+/my-terraform-project/*
+!/my-terraform-project/remote-backend
+/my-terraform-project/remote-backend/*
+
+
+# Allow specific files in my-terraform-project
+!/my-terraform-project/main.tf
+!/my-terraform-project/outputs.tf
+!/my-terraform-project/variables.tf
+
+# Allow specific files in my-terraform-project/remote-backend
+!/my-terraform-project/remote-backend/terraform.tfvars
+!/my-terraform-project/remote-backend/main.tf
+!/my-terraform-project/remote-backend/outputs.tf
+!/my-terraform-project/remote-backend/variables.tf
+
+# Ignore node_modules in enis-app-tp/frontend
+/enis-app-tp/frontend/node_modules
