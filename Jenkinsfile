@@ -20,7 +20,7 @@ pipeline {
              steps {
                  script {
                      dir('my-terraform-project/remote-backend') {
-                         sh 'terraform --version'
+                         terraform --version
                          sh "terraform init"
                          // Apply Terraform configuration
                          sh "terraform apply --auto-approve"
@@ -59,8 +59,8 @@ pipeline {
                          echo "RDS Endpoint: ${RDS_ENDPOINT}"
                          echo "Deployer Key URI: ${DEPLOYER_KEY_URI}"
                      }
-                 }
-             }
+                }
+            }
          }
         stage('Update Frontend Configuration') {
             steps {
